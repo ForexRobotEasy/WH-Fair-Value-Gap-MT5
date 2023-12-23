@@ -1,0 +1,86 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                           WH Fair Value Gap MT5  |
+//|                                    Developer: Forex Robot Easy   |
+//|                                    Developer's Site: forexroboteasy.com  |
+//+------------------------------------------------------------------+
+
+// Include necessary libraries and classes
+#include <Trade\Trade.mqh>
+#include <Expert\Expert.mqh>
+
+// Define the expert advisor class
+class CWhFairValueGapMT5 : public CExpertAdvisor
+{
+private:
+   CTrade m_trade; // Trade object for executing trades
+
+   // Other private variables and functions can be added here
+
+public:
+   // Constructor
+   CWhFairValueGapMT5()
+   {
+      // Initialize any necessary variables
+   }
+
+   // Destructor
+   ~CWhFairValueGapMT5()
+   {
+      // Clean up any resources
+   }
+
+   // OnInit event handler
+   void OnInit()
+   {
+      // Perform any necessary initialization tasks
+   }
+
+   // OnDeinit event handler
+   void OnDeinit(const int reason)
+   {
+      // Perform any necessary cleanup tasks
+   }
+
+   // OnTick event handler
+   void OnTick()
+   {
+      // Implement algorithm to identify fair value gaps in the Forex market
+      // and execute trades based on the identified gaps
+   }
+
+   // Other event handlers (OnTrade, OnChartEvent, etc.) can be added here
+};
+
+// Create an instance of the expert advisor class
+CWhFairValueGapMT5 expert;
+
+//+------------------------------------------------------------------+
+//| Expert initialization function                                   |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+   // Initialize the expert advisor
+   expert.OnInit();
+   return(INIT_SUCCEEDED);
+}
+
+//+------------------------------------------------------------------+
+//| Expert deinitialization function                                 |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+   // Deinitialize the expert advisor
+   expert.OnDeinit(reason);
+}
+
+//+------------------------------------------------------------------+
+//| Expert tick function                                             |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+   // Execute the expert advisor's OnTick event handler
+   expert.OnTick();
+}
+
+//+------------------------------------------------------------------+
